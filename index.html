@@ -1,14 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>문서 저장 도구</title>
   <link href='/style.css' rel='stylesheet'>
+  <!-- PDF 생성을 위한 라이브러리 추가 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <div class="container">
+    <h1>문서 작성 및 저장</h1>
+    <textarea id="content" placeholder="여기에 내용을 입력하세요..."></textarea>
+    
+    <div class="controls">
+      <select id="format">
+        <option value="pdf">PDF (*.pdf)</option>
+        <option value="word">워드 (*.docx)</option>
+      </select>
+      <button id="saveBtn">저장하기</button>
+    </div>
+  </div>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
